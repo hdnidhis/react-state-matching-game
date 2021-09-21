@@ -76,6 +76,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
+				hi hello
 				<header className="App-header">Turbo-Matcher</header>
 				<OptionsPanel
 					playing={this.state.playing}

@@ -8,7 +8,12 @@ const Tile = (props) => {
 			? { backgroundColor: props.color }
 			: null;
 	return (
-		<div className="Tile" style={conditionCheck}>
+		<div
+			className="Tile"
+			style={conditionCheck}
+			onClick={() => {
+				props.handleTileClicked(props.id, props.color);
+			}}>
 			{props.selected === true || props.matched === true ? <props.svg /> : null}
 		</div>
 	);

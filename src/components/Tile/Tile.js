@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import './Tile.css'
+import "./Tile.css";
 
-const Tile = () => {
+const Tile = (props) => {
+	const conditionCheck =
+		props.selected === true || props.matched === true
+			? { backgroundColor: props.color }
+			: null;
+	return (
+		<div className="Tile" style={conditionCheck}>
+			{props.selected === true || props.matched === true ? <props.svg /> : null}
+		</div>
+	);
+};
 
-  return (
-    <div className='Tile'>
-    </div>
-  )
-}
-
-export default Tile
+export default Tile;
